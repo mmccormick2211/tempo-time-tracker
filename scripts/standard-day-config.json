@@ -1,0 +1,155 @@
+{
+  "_readme": "CUSTOMIZE THIS FILE - Define your weekly schedule using work categories from ticket-mappings.json. Each entry uses an alias from a work category.",
+  "_instructions": {
+    "workCategory": "Reference to the work category key in ticket-mappings.json (for documentation)",
+    "ticket": "Use ANY alias from that work category's aliases array",
+    "duration": "How long this activity takes (e.g., '30m', '1h', '6h30m')",
+    "description": "Optional: Override the default description from the work category",
+    "startTime": "When this activity starts (HH:MM:SS format)",
+    "recurrence": "Optional recurrence object. Supported: { type: 'weekly' } or { type: 'biweekly', anchorDate: 'YYYY-MM-DD' }"
+  },
+  "workday": {
+    "timezone": "America/Chicago",
+    "startTime": "08:00:00",
+    "targetHours": "8h"
+  },
+  "totalHours": {
+    "Monday": "8h",
+    "Tuesday": "8h",
+    "Wednesday": "8h",
+    "Thursday": "8h",
+    "Friday": "8h"
+  },
+  "standardDays": {
+    "Monday": [
+      {
+        "workCategory": "meetings-general",
+        "ticket": "meeting",
+        "duration": "1h",
+        "description": "[WAF] Akamai/Relias - Implementation",
+        "startTime": "12:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      },
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "1h",
+        "description": "ECM - Daily Standup",
+        "startTime": "15:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      }
+    ],
+    "Tuesday": [
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "1h",
+        "description": "ECM - Daily Standup",
+        "startTime": "15:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      },
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "30m",
+        "description": "Cloud Engineer Weekly Standup",
+        "startTime": "14:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      },
+      {
+        "workCategory": "meetings-general",
+        "ticket": "meeting",
+        "duration": "1h",
+        "description": "Platform Sprint Demo",
+        "startTime": "12:30:00",
+        "recurrence": {
+          "type": "biweekly",
+          "anchorDate": "2026-03-10"
+        }
+      }
+    ],
+    "Wednesday": [
+      {
+        "workCategory": "deployments-platform",
+        "ticket": "deployment",
+        "duration": "1h",
+        "description": "Platform Deployments - Germany",
+        "startTime": "14:00:00",
+        "ticketOverrides": {
+          "2026-03-11": "CHM-5955"
+        },
+        "recurrence": {
+          "type": "biweekly",
+          "anchorDate": "2026-03-11"
+        }
+      },
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "1h",
+        "description": "ECM - Daily Standup",
+        "startTime": "15:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      }
+    ],
+    "Thursday": [
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "30m",
+        "description": "Pre-Social Standup",
+        "startTime": "14:30:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      },
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "1h",
+        "description": "ECM - Daily Standup",
+        "startTime": "15:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      },
+      {
+        "workCategory": "deployments-platform",
+        "ticket": "deployment",
+        "duration": "1h",
+        "description": "Platform Deployments - US/CA",
+        "startTime": "20:00:00",
+        "ticketOverrides": {
+          "2026-03-12": "CHM-5955"
+        },
+        "recurrence": {
+          "type": "biweekly",
+          "anchorDate": "2026-03-12"
+        }
+      }
+    ],
+    "Friday": [
+      {
+        "workCategory": "meetings-standup",
+        "ticket": "standup",
+        "duration": "1h",
+        "description": "ECM - Daily Standup",
+        "startTime": "15:00:00",
+        "recurrence": {
+          "type": "weekly"
+        }
+      }
+    ]
+  },
+  "_usage_note": "The 'workCategory' field is for documentation - it shows which work category from ticket-mappings.json this entry uses. The 'ticket' field can be ANY alias from that category's aliases array. Standard day templates are for RECURRING ITEMS ONLY - the agent will prompt users to log additional work separately. Keep incomplete days as-is and highlight past incomplete days for manual correction."
+}

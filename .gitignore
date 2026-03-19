@@ -1,0 +1,37 @@
+# Environment and secrets
+.env
+*.env
+.env.*
+
+# PowerShell history
+ConsoleHost_history.txt
+PSReadlineHistory.txt
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Personal configurations
+scripts/standard-day-config.personal.json
+scripts/*.personal.*
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.orig

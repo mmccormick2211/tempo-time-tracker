@@ -1,0 +1,160 @@
+{
+  "__readme": "CUSTOMIZE THIS FILE - Internal activity tickets are mapped from Confluence Tempo Time Tracking - Internal Activities (https://relias.atlassian.net/wiki/x/GABj7). Update SYS-11160 only if your infrastructure ticket changes.",
+  "_example_usage": {
+    "customize": "Infrastructure ticket can vary by person/team. Internal activity INT tickets follow the Confluence internal activities standard at https://relias.atlassian.net/wiki/x/GABj7.",
+    "monthly_reminder": "⚠️ MONTHLY ACTION REQUIRED: At the start of each month, generate a new catchall Ops Jira ticket and update 'meetings-general.jiraTicket' (currently SYS-11160) with the new ticket number.",
+    "examples": [
+      "Infrastructure: Use 'infra', 'opex', 'infrastructure', 'ops', 'sys' → SYS-11160 (GEN-MAINT)",
+      "Standup: Use 'standup', 'daily-standup', 'daily', 'scrum' → INT-14 (INT)",
+      "General Meeting (Catchall Ops): Use 'meeting', 'meetings', 'meet' → monthly catchall SYS ticket (GEN-MAINT). ⚠️ Update 'meetings-general.jiraTicket' at the start of each month with the new catchall ticket number.",
+      "Platform Deployment: Use 'deployment', 'platform-deployment' → CHM-5981 (GEN-DEV)",
+      "1:1 meeting: Use '1:1', '1on1', 'one-on-one', '121' → INT-14 (INT)",
+      "Retrospectives: Use 'retro', 'retrospective' → INT-2 (INT)",
+      "Professional Development: Use 'pd', 'training', 'learning', 'course' → INT-5 (INT)",
+      "Innovation/Hackathon: Use 'innovation', 'hackathon' → INT-6 (INT)",
+      "Work-related travel: Use 'travel', 'work-travel' → INT-7 (INT)",
+      "Time Off: Use 'pto', 'vacation', 'sick', 'sick-day', 'holiday', 'public-holiday' → INT-8 (INT)",
+      "FOH Enablement: Use 'foh', 'enablement' → INT-15 (INT)"
+    ],
+    "note": "You can log time using ANY alias - they all map to the same category"
+  },
+  "_instructions": {
+    "aliases": "Multiple ways to reference the same work (e.g., '1:1', 'one-on-one', '121' all map to the same category)",
+    "defaults": "Optional: defaultDuration, defaultDescription, defaultStartTime for recurring activities",
+    "structure": "Each work category contains: aliases (friendly names), jiraTicket, tempoAccount, and optional defaults",
+    "usage": "Reference any alias when logging time, and all settings are applied automatically"
+  },
+  "workCategories": {
+    "deployments-platform": {
+      "aliases": [
+        "deployment",
+        "deployments",
+        "platform-deployment",
+        "platform-deployments",
+        "release-deployment"
+      ],
+      "defaultDescription": "Relias Platform Deployment",
+      "jiraTicket": "CHM-5981",
+      "tempoAccount": "GEN-DEV"
+    },
+    "foh-enablement": {
+      "aliases": [
+        "foh",
+        "foh-enablement",
+        "enablement",
+        "sales-enablement",
+        "client-care-enablement"
+      ],
+      "defaultDescription": "FOH Enablement",
+      "jiraTicket": "INT-15",
+      "tempoAccount": "INT"
+    },
+    "infrastructure": {
+      "aliases": [
+        "infra",
+        "opex",
+        "infrastructure",
+        "ops",
+        "maintenance",
+        "sys"
+      ],
+      "jiraTicket": "SYS-11160",
+      "tempoAccount": "GEN-MAINT"
+    },
+    "innovation-hackathon": {
+      "aliases": [
+        "innovation",
+        "hackathon",
+        "innovation-hackathon"
+      ],
+      "defaultDescription": "Innovation/Hackathon",
+      "jiraTicket": "INT-6",
+      "tempoAccount": "INT"
+    },
+    "meetings-1on1": {
+      "aliases": [
+        "1:1",
+        "1on1",
+        "one-on-one",
+        "121",
+        "1-on-1"
+      ],
+      "defaultDescription": "1:1 meeting",
+      "defaultDuration": "1h",
+      "defaultStartTime": "09:00:00",
+      "jiraTicket": "INT-14",
+      "tempoAccount": "INT"
+    },
+    "meetings-general": {
+      "aliases": [
+        "meeting",
+        "meetings",
+        "meet"
+      ],
+      "jiraTicket": "SYS-11160",
+      "tempoAccount": "GEN-MAINT"
+    },
+    "meetings-standup": {
+      "aliases": [
+        "standup",
+        "daily-standup",
+        "daily",
+        "scrum"
+      ],
+      "defaultDescription": "ECM - Daily Standup",
+      "defaultDuration": "1h",
+      "defaultStartTime": "15:00:00",
+      "jiraTicket": "INT-14",
+      "tempoAccount": "INT"
+    },
+    "professional-development": {
+      "aliases": [
+        "pd",
+        "training",
+        "professional-development",
+        "learning",
+        "course"
+      ],
+      "jiraTicket": "INT-5",
+      "tempoAccount": "INT"
+    },
+    "retrospectives": {
+      "aliases": [
+        "retro",
+        "retrospective",
+        "retrospectives"
+      ],
+      "defaultDescription": "Retrospective",
+      "jiraTicket": "INT-2",
+      "tempoAccount": "INT"
+    },
+    "time-off": {
+      "aliases": [
+        "pto",
+        "vacation",
+        "time-off",
+        "sick",
+        "sick-day",
+        "sick-leave",
+        "ill",
+        "holiday",
+        "public-holiday",
+        "company-holiday"
+      ],
+      "defaultDescription": "Time off",
+      "defaultDuration": "8h",
+      "jiraTicket": "INT-8",
+      "tempoAccount": "INT"
+    },
+    "work-related-travel": {
+      "aliases": [
+        "travel",
+        "work-travel",
+        "work-related-travel"
+      ],
+      "defaultDescription": "Work-related travel",
+      "jiraTicket": "INT-7",
+      "tempoAccount": "INT"
+    }
+  }
+}
