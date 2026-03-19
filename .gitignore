@@ -35,3 +35,4 @@ scripts/*.personal.*
 *.bak
 *.backup
 *.orig
+History/
