@@ -101,6 +101,10 @@ Retrieves and analyzes existing worklogs.
 - See `SETUP.md` for detailed onboarding instructions.
 - See `SKILL.md` for AI-skill usage rules, correction workflows, and conversation patterns.
 
+## Author Credit
+
+Original skill created by John Martin.
+
 ## Notes
 
 - Tempo writes are non-idempotent. Replaying the same payload can create duplicates.
